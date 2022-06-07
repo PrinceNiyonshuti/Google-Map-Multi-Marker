@@ -44,14 +44,14 @@
             function initMap() {
                 // Define your locations: HTML content for the info window, latitude, longitude
                 var locations = [
-                    ['<h4>Obama</h4><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', -33.890542, 151.274856],
-                    ['<h4>Jared Leto</h4><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', -33.923036, 151.259052],
-                    ['<h4>Amanda Palmer</h4><img src="http://amandapalmer.net/wp-content/uploads/2013/09/1173818_10151647707218375_1357447411_n-300x200.png" height="100" width="100">', 40.6451594, -74.0850828],
-                    ['<h4>Random Girl</h4><img src="https://s-media-cache-ak0.pinimg.com/originals/62/71/76/627176b115aee264d92f7a33df1137d9.jpg" height="100" width="100">', -33.80010128657071, 151.28747820854187],
-                    ['<h4>Old Man</h4><img src="https://cdn.pixabay.com/photo/2014/05/22/16/57/face-351281_960_720.jpg" height="100" width="100">', -33.950198, 101.259302],
-                    ['<h4>RadioHead </h4> <img src="http://i1.kym-cdn.com/entries/icons/original/000/018/291/radiohead.jpg" height="100" width="100">', 30.950198, 131.259302],
-                    ['<h4>Oview data migration</h4> <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnD3tNAqzahr3RHZvGa5m-REBWzbt6lijC0fRA2wxfS0tHJUvvpA" height="100" width="100">', 52.3105386, 4.7],
-                    ['<h4>Smile</h4><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', -23.950198, 151.259302]
+                    ['<h4>Obama</h4><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', -1.9802784, 30.1680199],
+                    ['<h4>Jared Leto</h4><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', -1.964880, 30.069333],
+                    ['<h4>Amanda Palmer</h4><img src="http://amandapalmer.net/wp-content/uploads/2013/09/1173818_10151647707218375_1357447411_n-300x200.png" height="100" width="100">', -1.9626765, 30.1680199],
+                    ['<h4>Random Girl</h4><img src="https://s-media-cache-ak0.pinimg.com/originals/62/71/76/627176b115aee264d92f7a33df1137d9.jpg" height="100" width="100">', -1.9702784, 30.1680199],
+                    ['<h4>Old Man</h4><img src="https://cdn.pixabay.com/photo/2014/05/22/16/57/face-351281_960_720.jpg" height="100" width="100">', -1.9802784, 30.1680199],
+                    ['<h4>RadioHead </h4> <img src="http://i1.kym-cdn.com/entries/icons/original/000/018/291/radiohead.jpg" height="100" width="100">', -1.9202784, 30.1680199],
+                    ['<h4>Oview data migration</h4> <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRnD3tNAqzahr3RHZvGa5m-REBWzbt6lijC0fRA2wxfS0tHJUvvpA" height="100" width="100">', -1.9502784, 30.1680199],
+                    ['<h4>Smile</h4><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', -1.9402784, 30.1680199]
                 ];
 
                 // Setup the different icons and shadows
@@ -69,8 +69,8 @@
                 var iconsLength = icons.length;
 
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 2,
-                    center: new google.maps.LatLng(38.219139, -171.521267),
+                    zoom: 10,
+                    center: new google.maps.LatLng(-1.964880, 30.069333),
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     mapTypeControl: false, /* option for satelate view*/
                     streetViewControl: false,
