@@ -46,6 +46,9 @@ if ($conn->connect_error) {
         <button type="submit" name="employee">Employee</button>
         <button type="submit" name="client">Client</button>
         <button type="submit" name="car">Car</button>
+        <input type="text" name="search_data" id="">
+        <input type="date" name="search_date" id="">
+        <button type="submit" name="search">Search</button>
     </form>
     <div class="row text-center centered">
         <div id="map"></div>
@@ -88,6 +91,31 @@ if ($conn->connect_error) {
                 $color = $row1['color'];
                 $locations[] = array('<h4>' . $name . '</h4><br/><p>Tel:07800054645</p><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', $latitude, $longitude, $color);
             }
+        } elseif (isset($_POST['search'])) {
+            $search_data = $conn->real_escape_string($_POST['search_data']);
+            $search_date = $conn->real_escape_string($_POST['search_date']);
+            if(!empty($search_date)){
+                $sql = " SELECT * FROM $search_data where latitude != 'NA' AND longitude != 'NA' AND date_='$search_date' ";
+                $result = $conn->query($sql);
+                while ($row1 = $result->fetch_assoc()) {
+                    $name = $row1['date_'];
+                    $latitude = $row1['latitude'];
+                    $longitude = $row1['longitude'];
+                    $color = "orange-dot.png";
+                    $locations[] = array('<h4>' . $name . '</h4><br/><p>Tel:07800054645</p><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', $latitude, $longitude, $color);
+                }
+            }else{
+                $sql = " SELECT * FROM $search_data where latitude != 'NA' AND longitude != 'NA'";
+                $result = $conn->query($sql);
+                while ($row1 = $result->fetch_assoc()) {
+                    $name = $row1['date_'];
+                    $latitude = $row1['latitude'];
+                    $longitude = $row1['longitude'];
+                    $color = "orange-dot.png";
+                    $locations[] = array('<h4>' . $name . '</h4><br/><p>Tel:07800054645</p><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', $latitude, $longitude, $color);
+                }
+            }
+            
         } else {
             $sql = ' SELECT * FROM locations ';
             $result = $conn->query($sql);
