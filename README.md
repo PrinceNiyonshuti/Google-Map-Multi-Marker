@@ -11,6 +11,7 @@ before starting to run the project
 -   create your Google Map API Key
 -   create your database
 
+#### DB Structure
 
 ## Feedback and issues
 
