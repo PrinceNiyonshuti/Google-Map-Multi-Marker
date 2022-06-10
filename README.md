@@ -13,6 +13,8 @@ before starting to run the project
 
 #### DB Structure
 
+#### Color Pallete Used
+
 ## Feedback and issues
 
 Any issue and feedback from the app don't hesitate to make an issue
