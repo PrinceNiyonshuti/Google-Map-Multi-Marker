@@ -5,3 +5,8 @@ Multiple Google Maps Markers is a simple project that helps to add multiple mark
 ## Documentation
 
 before starting to run the project
+
+### Requirements
+
+-   create your Google Map API Key
+-   create your database
