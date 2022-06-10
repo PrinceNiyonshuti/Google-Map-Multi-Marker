@@ -10,3 +10,8 @@ before starting to run the project
 
 -   create your Google Map API Key
 -   create your database
+
+
+## Feedback and issues
+
+Any issue and feedback from the app don't hesitate to make an issue
