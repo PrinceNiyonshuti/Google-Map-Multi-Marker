@@ -2,7 +2,7 @@
 $servername = 'localhost';
 $username = 'root';
 $password = '';
-$dbname = 'payroll';
+$dbname = 'location';
 
 date_default_timezone_set('Africa/Cairo');
 
@@ -47,7 +47,8 @@ if ($conn->connect_error) {
         <button type="submit" name="client">Client</button>
         <button type="submit" name="car">Car</button>
         <input type="text" name="search_data" id="">
-        <input type="date" name="search_date" id="">
+        <input type="date" name="range_start" id="">
+        <input type="date" name="range_end" id="">
         <button type="submit" name="search">Search</button>
     </form>
     <div class="row text-center centered">
@@ -93,29 +94,29 @@ if ($conn->connect_error) {
             }
         } elseif (isset($_POST['search'])) {
             $search_data = $conn->real_escape_string($_POST['search_data']);
-            $search_date = $conn->real_escape_string($_POST['search_date']);
-            if(!empty($search_date)){
-                $sql = " SELECT * FROM $search_data where latitude != 'NA' AND longitude != 'NA' AND date_='$search_date' ";
+            $range_start = $conn->real_escape_string($_POST['range_start']);
+            $range_end = $conn->real_escape_string($_POST['range_end']);
+            if (!empty($range_start)) {
+                $sql = " SELECT * FROM locations where date between '$range_start' and '$range_end' ";
                 $result = $conn->query($sql);
                 while ($row1 = $result->fetch_assoc()) {
-                    $name = $row1['date_'];
+                    $name = $row1['name'];
                     $latitude = $row1['latitude'];
                     $longitude = $row1['longitude'];
                     $color = "orange-dot.png";
                     $locations[] = array('<h4>' . $name . '</h4><br/><p>Tel:07800054645</p><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', $latitude, $longitude, $color);
                 }
-            }else{
-                $sql = " SELECT * FROM $search_data where latitude != 'NA' AND longitude != 'NA'";
+            } else {
+                $sql = " SELECT * FROM locations where name='$search_data' ";
                 $result = $conn->query($sql);
                 while ($row1 = $result->fetch_assoc()) {
-                    $name = $row1['date_'];
+                    $name = $row1['name'];
                     $latitude = $row1['latitude'];
                     $longitude = $row1['longitude'];
                     $color = "orange-dot.png";
                     $locations[] = array('<h4>' . $name . '</h4><br/><p>Tel:07800054645</p><img src="https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg" height="100" width="100">', $latitude, $longitude, $color);
                 }
             }
-            
         } else {
             $sql = ' SELECT * FROM locations ';
             $result = $conn->query($sql);
