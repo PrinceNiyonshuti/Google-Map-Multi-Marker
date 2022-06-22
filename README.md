@@ -17,7 +17,7 @@ before starting to run the project
 #### Color Pallete Used
 
 -   for Employee we used [green-dot.png]()
--   for Client we user [orange-dot.png]()
+-   for Client we used [orange-dot.png]()
 -   for Car we user [red-dot.png]()
 
 ## Feedback and issues
