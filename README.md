@@ -16,6 +16,8 @@ before starting to run the project
 
 #### Color Pallete Used
 
+-   for Employee we user [green-dot.png]()
+
 ## Feedback and issues
 
 Any issue and feedback from the app don't hesitate to make an issue
