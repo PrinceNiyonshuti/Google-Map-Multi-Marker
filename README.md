@@ -18,6 +18,7 @@ before starting to run the project
 
 -   for Employee we user [green-dot.png]()
 -   for Client we user [orange-dot.png]()
+-   for Car we user [red-dot.png]()
 
 ## Feedback and issues
 
