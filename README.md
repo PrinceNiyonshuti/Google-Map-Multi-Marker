@@ -10,6 +10,7 @@ before starting to run the project
 
 -   create your Google Map API Key
 -   create your database
+-   php v8 or later
 
 #### DB Structure
 
