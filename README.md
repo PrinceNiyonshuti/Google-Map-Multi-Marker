@@ -18,7 +18,7 @@ before starting to run the project
 
 -   for Employee we used [green-dot.png]()
 -   for Client we used [orange-dot.png]()
--   for Car we user [red-dot.png]()
+-   for Car we used [red-dot.png]()
 
 ## Feedback and issues
 
