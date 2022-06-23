@@ -4,7 +4,7 @@ Multiple Google Maps Markers is a simple project that helps to add multiple mark
 
 ## Documentation
 
-before starting to run the project
+before starting to run the project you must have the apache server or [Xammp]() the recommended one. 
 
 ### Requirements
 
