@@ -11,6 +11,7 @@ before starting to run the project you must have the apache server or [Xammp]() 
 -   create your Google Map API Key
 -   create your database
 -   php v8 or later
+-   Xampp or Apache server
 
 #### DB Structure
 
