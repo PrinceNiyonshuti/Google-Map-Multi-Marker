@@ -14,6 +14,9 @@ before starting to run the project you must have the apache server or [Xammp]() 
 -   Xampp or Apache server
 
 #### DB Structure
+```Sql
+
+```
 
 #### Color Pallete Used
 
