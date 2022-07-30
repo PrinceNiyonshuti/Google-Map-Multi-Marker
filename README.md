@@ -15,7 +15,15 @@ before starting to run the project you must have the apache server or [Xammp]() 
 
 #### DB Structure
 ```Sql
-
+CREATE TABLE `locations` (
+  `loc_id` int(11) NOT NULL,
+  `name` longtext NOT NULL,
+  `latitude` longtext NOT NULL,
+  `longitude` longtext NOT NULL,
+  `color` text NOT NULL,
+  `status` text NOT NULL,
+  `date` date NOT NULL
+)
 ```
 
 #### Color Pallete Used
